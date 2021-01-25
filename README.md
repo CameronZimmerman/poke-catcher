@@ -23,6 +23,7 @@
     - append them to our container div
         - attachPokemon(array, element)
             - attach each element in array to given element
+    - deal with local storage
 - on click ->
     - repeat process, incrementing caught for clicked pokemon
 
