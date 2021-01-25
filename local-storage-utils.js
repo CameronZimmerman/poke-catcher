@@ -1,3 +1,5 @@
+import { findByUnderscoreId } from './utils.js';
+
 const POKESTATS = 'POKESTATS';
 
 export function getPokeStats(){
@@ -6,7 +8,7 @@ export function getPokeStats(){
 
 export function updatePokeStats(pokemon, isCaught) {
     const pokeStats = getPokeStats();
-    const pokemonStat = findById(pokemon);
+    const pokemonStat = findByUnderscoreId(pokemon);
 
     if (!isCaught) {
 

@@ -1,5 +1,12 @@
 import pokeData from './data.js';
 
+export function findByUnderscoreId(_id, array) {
+    for (const item of array) {
+        if (item._id === _id) return item;
+    }
+    return null;
+}
+
 function getRandomPokemon(pokeArray, amount) {
     const randPokeSet = new Set([]);
 
