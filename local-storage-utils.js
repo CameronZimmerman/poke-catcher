@@ -23,6 +23,9 @@ export function updatePokeStats(pokemon, isCaught) {
             pokeStats.push(newPokeStat);
         }
     }
+    else {
+        pokemonStat.caught++;
+    }
 
     localStorage.setItem(POKESTATS, JSON.stringify(pokeStats));
 }

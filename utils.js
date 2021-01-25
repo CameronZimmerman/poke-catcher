@@ -1,4 +1,3 @@
-import pokeData from './data.js';
 
 export function findByUnderscoreId(_id, array) {
     for (const item of array) {
@@ -7,7 +6,7 @@ export function findByUnderscoreId(_id, array) {
     return null;
 }
 
-function getRandomPokemon(pokeArray, amount) {
+export function getRandomPokemon(pokeArray, amount) {
     const randPokeSet = new Set([]);
 
     while (randPokeSet.size < amount) {
@@ -17,7 +16,7 @@ function getRandomPokemon(pokeArray, amount) {
     return Array.from(randPokeSet);
 }
 
-function renderPokemon(randPokeArray, element) {
+export function renderPokemon(randPokeArray, element) {
     for (const pokemon of randPokeArray) {
         let img = document.createElement('img');
         img.src = pokemon.url_image;
@@ -27,4 +26,3 @@ function renderPokemon(randPokeArray, element) {
         element.append(img);
     }
 }
-
