@@ -2,7 +2,7 @@ import { findByUnderscoreId } from './utils.js';
 
 const POKESTATS = 'POKESTATS';
 
-function getPokeStats(){
+export function getPokeStats(){
     return JSON.parse(localStorage.getItem(POKESTATS) || '[]');
 }
 
