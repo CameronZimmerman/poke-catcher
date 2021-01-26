@@ -25,13 +25,15 @@ export function getRandomPokemon(pokeArray, amount) {
 export function renderPokemon(randPokeArray, element) {
     element.textContent = '';
     for (const pokemon of randPokeArray) {
-        let img = document.createElement('img');
+        const img = document.createElement('img');
+        const container = document.createElement('div');
+        container.append(img);
         img.src = pokemon.url_image;
         img.addEventListener('click', () => {
             updatePokeStats(pokemon, true);
             gameLoop();
         });
-        element.append(img);
+        element.append(container);
     }
 }
 
