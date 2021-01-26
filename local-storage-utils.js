@@ -1,3 +1,4 @@
+import data from './data.js';
 import { findByUnderscoreId } from './utils.js';
 
 const POKESTATS = 'POKESTATS';
@@ -15,6 +16,7 @@ export function updatePokeStats(pokemon, isCaught) {
         if (pokemonStat) pokemonStat.seen++;
         else {
             const newPokeStat = {
+                name : pokemon.pokebase,
                 _id : pokemon._id,
                 seen : 1,
                 caught : 0
