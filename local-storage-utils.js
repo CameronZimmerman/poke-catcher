@@ -29,3 +29,7 @@ export function updatePokeStats(pokemon, isCaught) {
 
     localStorage.setItem(POKESTATS, JSON.stringify(pokeStats));
 }
+
+export function clearPokeStats(){
+    localStorage.setItem(POKESTATS, '[]');
+}
