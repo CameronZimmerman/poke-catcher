@@ -1,5 +1,3 @@
-// import functions and grab DOM elements
+import gameLoop from './utils.js';
 
-// initialize state
-
-// set event listeners to update state and DOM
+gameLoop();
