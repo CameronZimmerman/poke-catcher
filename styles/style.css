@@ -35,7 +35,26 @@ header button {
     justify-content: space-between;
     flex-wrap:wrap;
 }
+.intro-container {
+    border: 5px solid #ff1f1f;
+    border-radius: 15px;
+    background-color: #fbd643b2;
+    transition: opacity 0.3s ease-in-out;
 
+}
+
+.fade {
+    opacity: 0;
+}
+
+.intro-container p {
+    max-width: 400px;
+    text-align: center;
+    
+}
+hr {
+    border: 2px solid #ff1f1f;
+}
 #pokemon-container div :hover {
     transform: scale(1.5);
     transform: rotate(7deg);
@@ -55,4 +74,8 @@ header button {
 @font-face {
     font-family: "Pokemon";
     src: url('../assets/Pokemon\ Hollow.ttf')
+}
+.pokeball-count-container{
+    width: 100%;
+    text-align: center;
 }
