@@ -43,12 +43,10 @@ export function updatePokeStats(pokemon, isCaught) {
 
 export function updateAllTimeStats(pokeStats){
     let allTimeStats = getAllTimeStats();
-    console.log(allTimeStats);
 
     allTimeStats.push(pokeStats);
 
     localStorage.setItem(ALLTIMESTATS, JSON.stringify(allTimeStats));
-    console.log();
 }
 
 export function clearPokeStats(){
