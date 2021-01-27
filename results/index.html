@@ -5,46 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/results.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Poke Catcher results!</title>
 </head>
 
 <body>
     <header>
-        
+        <h2>
+        Here are your results!
+        </h2>
+        <button id = "reset-button">Reset Game?</button>
+        <button id = "all-stats-button">see all stats?</button>
+
     </header>
     <main>
         <section class="main-section">
-           
-            <h2>
-                Here are your results!
-            </h2>
-
-            <div class = "results-container">
-
-                <div class = "caught-results">
-                    <label>
-                        Caught Pokemon
-                        <table id = "caught-table">
-                            <th>
-                                <td>Pokemon</td>
-                                <td>Name</td>
-                                <td>Seen</td>
-                                <td>Caught</td>
-                            </th>
-                        </table>
-                    </label>
-                </div>
-
-                <div class = "seen-results">
-                    <label>
-                        Seen but not caught Pokemon
-                        <table id = 'seen-table'></table>
-                    </label>
-                </div>
-                <button id = "reset-button">Reset Game?</button>
+            <div class = "chart-container">
+                <canvas id="myChart" width="350" height="350"></canvas>
+                <canvas id="myChart2" width="350" height="350"></canvas>
+                <canvas id="myChart3" width="350" height="350"></canvas>
+                <canvas id="myChart4" width="350" height="350"></canvas>
+                <canvas id="myChart5" width="350" height="350"></canvas>
+            </div>        
+            <div class = "caught-results">
+                <label>
+                    Caught Pokemon
+                </label>
+                    <table id = "caught-table">
+                        <tr>
+                            <td>Pokemon</td>
+                            <td>Name</td>
+                            <td>Seen</td>
+                            <td>Caught</td>
+                        </tr>
+                    </table>
             </div>
 
+            <div class = "seen-results">
+                <label>
+                    Seen but not caught Pokemon
+                </label>
+                <table id = 'seen-table'></table>
+            </div>
         </section>
     </main>
     <footer>

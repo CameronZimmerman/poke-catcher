@@ -1,0 +1,81 @@
+html {
+    background-color: #5db9ff;
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+
+
+}
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #fbd743;
+    margin-bottom: 20px;
+    font-family: "Pokemon", cursive;
+    font-size: 2em;
+    color: #2958a0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: #5db9ff 3px solid;
+    outline-offset: -10px;
+}
+
+header button {
+    margin: 40px;
+    align-self: flex-end;
+    align-content: center;
+    font-family: 'Exo', sans-serif;
+    background-color: #5db9ff;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.intro-container {
+    border: 5px solid #ff1f1f;
+    border-radius: 15px;
+    background-color: #fbd643b2;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.fade {
+    opacity: 0;
+}
+
+.intro-container p {
+    max-width: 400px;
+    text-align: center;
+    
+}
+hr {
+    border: 2px solid #ff1f1f;
+}
+#pokemon-container div :hover {
+    transform: scale(1.5);
+    transform: rotate(7deg);
+    cursor: url('../assets/pokeball.png'), auto;
+
+}
+
+#pokemon-container div :active {
+    transform: scale(0.5);
+}
+
+#pokemon-container div img {
+    width: 200px;
+    transition: .2s ease-in-out;
+}
+
+@font-face {
+    font-family: "Pokemon";
+    src: url('../assets/Pokemon\ Hollow.ttf')
+}
+.pokeball-count-container{
+    width: 100%;
+    text-align: center;
+}

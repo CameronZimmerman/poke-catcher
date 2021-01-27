@@ -2,7 +2,7 @@ import pokeData from '../data.js';
 import { findByUnderscoreId } from '../utils.js';
 
 export function renderCaughtResults(pokeStat) {
-    if(pokeStat.caught > 0){
+    if (pokeStat.caught > 0){
         const table = document.getElementById('caught-table');
         const newPokemon = findByUnderscoreId(pokeStat._id, pokeData);
         const tr = document.createElement('tr');
@@ -38,7 +38,6 @@ export function renderSeenResults(pokeStat) {
         table.append(seenP);
 
         const pokemonImg = document.createElement('img');
-        const tdPokemon = document.createElement('td');
         pokemonImg.src = newPokemon.url_image;
         pokemonImg.classList.add('poke-img');
         table.append(pokemonImg);

@@ -2,6 +2,7 @@ import pokeData from './data.js';
 import { updatePokeStats } from './local-storage-utils.js';
 
 let rounds = 0;
+const roundCountSpan = document.getElementById('round-count');
 
 export function findByUnderscoreId(_id, array) {
     for (const item of array) {
@@ -25,13 +26,15 @@ export function getRandomPokemon(pokeArray, amount) {
 export function renderPokemon(randPokeArray, element) {
     element.textContent = '';
     for (const pokemon of randPokeArray) {
-        let img = document.createElement('img');
+        const img = document.createElement('img');
+        const container = document.createElement('div');
+        container.append(img);
         img.src = pokemon.url_image;
         img.addEventListener('click', () => {
             updatePokeStats(pokemon, true);
             gameLoop();
         });
-        element.append(img);
+        element.append(container);
     }
 }
 
@@ -39,6 +42,7 @@ export default function gameLoop(){
     const pokeContainerDiv = document.getElementById('pokemon-container');
 
     rounds++;
+    roundCountSpan.textContent = 11 - rounds;
 
     if (rounds <= 10) {
         const randPokeArray = getRandomPokemon(pokeData, 3);

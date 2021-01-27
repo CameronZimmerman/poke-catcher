@@ -2,3 +2,42 @@
     width: 75px;
     height: 75px;
 }
+button {
+    height: 50px;
+}
+
+.main-section div{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    margin: 5px;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+    background-color: #fbd743;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: "Pokemon", cursive;
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: #2958a0;
+
+}
+
+table {
+    background-color: ;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "Pokemon";
+    src: url('../assets/Pokemon\ Hollow.ttf')
+}
