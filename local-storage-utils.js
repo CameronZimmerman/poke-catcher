@@ -1,9 +1,14 @@
 import { findByUnderscoreId } from './utils.js';
 
 const POKESTATS = 'POKESTATS';
+const ALLTIMESTATS = 'ALLTIMESTATS';
 
 export function getPokeStats(){
     return JSON.parse(localStorage.getItem(POKESTATS) || '[]');
+}
+
+export function getAllTimeStats(){
+    return JSON.parse(localStorage.getItem(ALLTIMESTATS) || '[]');
 }
 
 export function updatePokeStats(pokemon, isCaught) {
@@ -34,6 +39,16 @@ export function updatePokeStats(pokemon, isCaught) {
     }
 
     localStorage.setItem(POKESTATS, JSON.stringify(pokeStats));
+}
+
+export function updateAllTimeStats(pokeStats){
+    let allTimeStats = getAllTimeStats();
+    console.log(allTimeStats);
+
+    allTimeStats.push(pokeStats);
+
+    localStorage.setItem(ALLTIMESTATS, JSON.stringify(allTimeStats));
+    console.log();
 }
 
 export function clearPokeStats(){

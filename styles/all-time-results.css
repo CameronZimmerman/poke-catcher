@@ -1,0 +1,9 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main-section canvas {
+    background-color: white;
+}

@@ -1,9 +1,10 @@
-import { clearPokeStats, getPokeStats } from '../local-storage-utils.js';
+import { clearPokeStats, getPokeStats, updateAllTimeStats } from '../local-storage-utils.js';
 import { renderCaughtResults, renderSeenResults } from './results-utils.js';
 import getPropertyArrOfObjArr from './munge-utils.js';
 
 const pokeStats = getPokeStats();
 const resetButton = document.getElementById('reset-button');
+const allStatsButton = document.getElementById('all-stats-button');
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var ctx2 = document.getElementById('myChart2').getContext('2d');
@@ -374,5 +375,12 @@ for (const item of pokeStats) {
 
 resetButton.addEventListener('click', () => {
     clearPokeStats();
+    updateAllTimeStats(pokeStats);
     window.location = '../';
+});
+
+allStatsButton.addEventListener('click', () => {
+    clearPokeStats();
+    updateAllTimeStats(pokeStats);
+    window.location = '../all-time-stats';
 });
